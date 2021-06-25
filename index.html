@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./favicon-new.png" type="image/png" />
+    <!-- import fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/build/style/main.css" />
+
+    <title>Codusk :: Technology &#8211; Software Company</title>
+  </head>
+
+  <body class="font-lato">
+    <section
+      class="relative w-full lg:h-screen bg-cover py-24"
+      style="background-image: url(./assets/images/Group1.png)"
+      id="home"
+    >
+      <header
+        class="
+          w-full
+          absolute
+          top-0
+          left-1/2
+          transform
+          -translate-x-1/2
+          py-4
+          px-3
+          z-10
+        "
+      >
+        <div
+          class="
+            w-full
+            xl:container
+            mx-auto
+            p-2
+            flex
+            items-center
+            justify-between
+            flex-nowrap
+          "
+        >
+          <a href="#">
+            <img
+              src="./assets/images/logo.png"
+              alt="logo image"
+              width="125"
+              height="45"
+            />
+          </a>
+          <nav
+            class="
+              navBar__container
+              fixed
+              hidden
+              items-center
+              justify-center
+              p-5
+              bg-gray-900
+              w-screen
+              h-screen
+              overflow-y-auto
+              inset-0
+              p-16
+            "
+          >
+            <button
+              class="
+                navBar__btn
+                absolute
+                top-0
+                right-0
+                p-6
+                flex
+                items-center
+                justify-around
+                text-white text-xl
+              "
+            >
+              Close →
+            </button>
+            <ul class="list-none flex items-center justify-center flex-col">
+              <li class="my-2">
+                <a
+                  href="#home"
+                  class="
+                    no-under-line
+                    px-2
+                    table
+                    text-white
+                    font-semibold
+                    text-3xl
+                  "
+                  >HOME</a
+                >
+              </li>
+              <li class="my-2">
+                <a
+                  href="#about"
+                  class="
+                    no-under-line
+                    px-2
+                    table
+                    text-white
+                    font-semibold
+                    text-3xl
+                  "
+                  >ABOUT</a
+                >
+              </li>
+              <li class="my-2">
+                <a
+                  href="#services"
+                  class="
+                    no-under-line
+                    px-2
+                    table
+                    text-white
+                    font-semibold
+                    text-3xl
+                  "
+                  >SERVICES</a
+                >
+              </li>
+              <li class="my-2">
+                <a
+                  href="#portfolio"
+                  class="
+                    no-under-line
+                    px-2
+                    table
+                    text-white
+                    font-semibold
+                    text-3xl
+                  "
+                  >PORTFOLIO</a
+                >
+              </li>
+              <li class="my-2">
+                <a
+                  href="#contact"
+                  class="
+                    no-under-line
+                    px-2
+                    table
+                    text-white
+                    font-semibold
+                    text-3xl
+                  "
+                  >CONTACT</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <nav class="hidden md:block">
+            <ul class="list-none inline-flex items-center">
+              <li class="mx-2">
+                <a
+                  href="#home"
+                  class="
+                    no-under-line
+                    px-2
+                    table
+                    text-white
+                    font-medium
+                    text-xl
+                  "
+                  >HOME</a
+                >
+              </li>
+              <li class="mx-2">
+                <a
+                  href="#about"
+                  class="
+                    no-under-line
+                    px-2
+                    table
+                    text-white
+                    font-medium
+                    text-xl
+                  "
+                  >ABOUT</a
+                >
+              </li>
+              <li class="mx-2">
+                <a
+                  href="#services"
+                  class="
+                    no-under-line
+                    px-2
+                    table
+                    text-white
+                    font-medium
+                    text-xl
+                  "
+                  >SERVICES</a
+                >
+              </li>
+              <li class="mx-2">
+                <a
+                  href="#portfolio"
+                  class="
+                    no-under-line
+                    px-2
+                    table
+                    text-white
+                    font-medium
+                    text-xl
+                  "
+                  >PORTFOLIO</a
+                >
+              </li>
+              <li class="mx-2">
+                <a
+                  href="#contact"
+                  class="
+                    no-under-line
+                    px-2
+                    table
+                    text-white
+                    font-medium
+                    text-xl
+                  "
+                  >CONTACT</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <button
+            class="
+              navBar__btn--append
+              block
+              transition
+              ease-in-out
+              duration-300
+              md:hidden
+            "
+          >
+            <span class="table w-6 h-0.5 bg-white ml-auto my-1"></span>
+            <span class="table w-3 h-0.5 bg-white ml-auto my-1"></span>
+          </button>
+        </div>
+      </header>
+      <main
+        class="
+          max-w-screen-lg
+          table
+          mx-auto
+          py-20
+          px-6
+          text-center text-white
+          relative
+          lg:absolute
+          lg:top-1/2
+          lg:left-1/2
+          lg:transform
+          lg:-translate-x-1/2
+          lg:-translate-y-1/2
+        "
+      >
+        <h2 class="text-4xl font-medium">Your It Business Partner</h2>
+        <h1 class="text-6xl font-bold py-3">Codusk Means Solutions.</h1>
+        <a
+          href="#contact"
+          class="
+            py-3
+            px-6
+            rounded-lg
+            bg-yellow-600
+            table
+            font-semibold
+            text-sm
+            my-3
+            mx-auto
+            text-white text-center
+          "
+          >CONTACT US</a
+        >
+      </main>
+      <nav
+        class="
+          absolute
+          bottom-0
+          transform
+          -translate-x-1/2
+          left-1/2
+          sm:left-6
+          py-4
+          sm:transform-none
+        "
+      >
+        <ul class="list-none">
+          <li class="inline-block mx-2">
+            <a
+              href="https://facebook.com"
+              class="no-underline text-2xl text-white"
+              ><i class="fab fa-facebook"></i
+            ></a>
+          </li>
+          <li class="inline-block mx-2">
+            <a
+              href="https://whatsapp.com"
+              class="no-underline text-2xl text-white"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </li>
+          <li class="inline-block mx-2">
+            <a href="tel:" class="no-underline text-2xl text-white"
+              ><i class="far fa-phone-alt"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <section class="w-full lg:container mx-auto p-7" id="about">
+      <h3
+        class="
+          text-xl
+          uppercase
+          table
+          my-4
+          mx-auto
+          font-bold
+          text-gray-800
+          relative
+        "
+        data-type="title"
+      >
+        <span class="text-gray-700 text-xl">#</span>
+        <span class="indictor__title">About</span>
+      </h3>
+      <main class="lg:flex items-start justify-center flex-row my-6 py-6">
+        <img
+          src="./assets/images/Group6.png"
+          alt="about image"
+          class="
+            h-auto
+            lg:mr-12
+            w-full
+            mx-auto
+            lg:mx-0
+            max-w-screen-sm
+            lg:w-5/12
+            table
+          "
+        />
+        <div class="lg:max-w-screen-sm lg:w-5/12 lg:mt-0 mt-16">
+          <h3 class="text-2xl py-2 font-bold text-gray-800">
+            Let’s build something truly amazing
+          </h3>
+          <h4 class="text-xl font-medium text-gray-700 py-3">
+            We deliver great results for our customers because we all know
+            that’s what keeps them returning to us. That’s why at Codusk, the
+            focus is always on customers needs.
+          </h4>
+          <p class="text-gray-500 py-4 px-5 font-medium relative">
+            <img
+              src="./assets/images/quote.svg"
+              alt="quote image"
+              class="absolute top-3 left-0"
+              width="12"
+              height="12"
+            />
+            <span
+              class="
+                absolute
+                top-24
+                text-xs text-gray-500
+                font-semibold
+                left-0
+                p-2
+                transform
+                origin-top-left
+                -rotate-90
+                -translate-x-2.5
+                translate-y-16
+                block
+              "
+            >
+              Fri, June 16 , 2021
+            </span>
+            <span class="block">
+              The target audience for Codusk are online and offline customers
+              worldwide and nationwide from individual person to medium size
+              entrepreneurs who want to increase their productivity.
+              Specifically, those entrepreneurs who are still unaware of the
+              benefits of technology usage in the business.
+            </span>
+            <span class="block py-5">
+              Codusk started its journey with a small team with a mission to
+              deliver the best of its expertise in web-based solutions to its
+              customers but after its marvelous performance in recent years, it
+              has now grown to a point where Codusk is providing commendable job
+              in Graphic Designing, Web solutions, and Digital Marketing.
+            </span>
+            <span class="block">
+              If you want to know more about us or to ask if we can help you,
+              please feel free to get in touch.
+            </span>
+          </p>
+          <a
+            href="#contact"
+            class="
+              py-3
+              px-6
+              rounded-lg
+              bg-yellow-600
+              font-semibold
+              text-sm
+              my-3
+              ml-4
+              my-5
+              table
+              text-white
+            "
+            >CONTACT US</a
+          >
+        </div>
+      </main>
+    </section>
+    <section class="w-full lg:container mx-auto p-7" id="services">
+      <h3
+        class="
+          text-xl
+          uppercase
+          table
+          my-4
+          mx-auto
+          font-bold
+          text-gray-800
+          relative
+        "
+        data-type="title"
+      >
+        <span class="text-gray-700 text-xl">#</span>
+        <span class="indictor__title">SERVICES</span>
+      </h3>
+      <h1
+        class="
+          text-5xl
+          capitalize
+          table
+          my-6
+          mx-auto
+          font-bold
+          text-gray-800
+          relative
+          text-center
+        "
+      >
+        What We Do
+      </h1>
+      <main class="sm:grid gap-5 my-10" data-type="grid__container">
+        <a
+          href="#services"
+          class="w-full h-auto rounded-xl bg-white text-center p-6"
+          data-type="services"
+        >
+          <img
+            src="./assets/images/Web.png"
+            alt="web development image"
+            width="60"
+            height="60"
+            class="mb-6 table mx-auto"
+          />
+          <h2 class="text-xl text-gray-800 font-bold p-3 capitalize">
+            web development
+          </h2>
+          <p class="text-sm font-medium text-gray-500">
+            CODUSK Tech. has a team of proficient web designers and developers.
+            It is the diligence of our developers that has enabled us to be the
+            best at providing digital services. We derive dynamic designs for
+            brands worldwide.
+          </p>
+        </a>
+        <a
+          href="#services"
+          class="w-full h-auto rounded-xl bg-white text-center p-6"
+          data-type="services"
+        >
+          <img
+            src="./assets/images/Text Box.png"
+            alt="web development image"
+            width="60"
+            height="60"
+            class="mb-6 table mx-auto"
+          />
+          <h2 class="text-xl text-gray-800 font-bold p-3 capitalize">
+            Graphics Designing
+          </h2>
+          <p class="text-sm font-medium text-gray-500">
+            Graphic Designing is our forte. Our design teams are located across
+            the globe with a mission to leave a lasting impact on the corporate
+            world, we bring our skilled artists to earn your brand the name it
+            deserves.
+          </p>
+        </a>
+        <a
+          href="#services"
+          class="w-full h-auto rounded-xl bg-white text-center p-6"
+          data-type="services"
+        >
+          <img
+            src="./assets/images/WordPress.png"
+            alt="web development image"
+            width="60"
+            height="60"
+            class="mb-6 table mx-auto"
+          />
+          <h2 class="text-xl text-gray-800 font-bold p-3 capitalize">
+            WordPress Development
+          </h2>
+          <p class="text-sm font-medium text-gray-500">
+            We use all the information gathered in the first phase to come up
+            with a plan for the website.
+          </p>
+        </a>
+        <a
+          href="#services"
+          class="w-full h-auto rounded-xl bg-white text-center p-6"
+          data-type="services"
+        >
+          <img
+            src="./assets/images/Paid Search.png"
+            alt="web development image"
+            width="60"
+            height="60"
+            class="mb-6 table mx-auto"
+          />
+          <h2 class="text-xl text-gray-800 font-bold p-3 capitalize">
+            Digital Marketing
+          </h2>
+          <p class="text-sm font-medium text-gray-500">
+            Our Marketers are specialists who keep a record of the changing
+            trends of the tech world. With an ethical approach to branding,
+            these individuals work tirelessly to market your brand well enough
+            to overthrow your competition.
+          </p>
+        </a>
+        <a
+          href="#services"
+          class="w-full h-auto rounded-xl bg-white text-center p-6"
+          data-type="services"
+        >
+          <img
+            src="./assets/images/Design.png"
+            alt="web development image"
+            width="60"
+            height="60"
+            class="mb-6 table mx-auto"
+          />
+          <h2 class="text-xl text-gray-800 font-bold p-3 capitalize">
+            UI \ UX Designing
+          </h2>
+          <p class="text-sm font-medium text-gray-500">
+            We use all the information gathered in the first phase to come up
+            with a plan for the website.
+          </p>
+        </a>
+      </main>
+    </section>
+    <section class="w-full lg:container mx-auto p-7" id="portfolio">
+      <h3
+        class="
+          text-xl
+          uppercase
+          table
+          my-4
+          mx-auto
+          font-bold
+          text-gray-800
+          relative
+        "
+        data-type="title"
+      >
+        <span class="text-gray-700 text-xl">#</span>
+        <span class="indictor__title">PORTFOLIO</span>
+      </h3>
+      <main class="sm:grid gap-5 my-10" data-type="grid__container">
+        <figure class="w-full">
+          <blockquote class="w-full">
+            <img
+              src="./assets/images/portfolio.png"
+              alt="portfolio image"
+              class="w-full h-auto rounded-2xl mb-3 object-cover"
+            />
+          </blockquote>
+          <figcaption class="p-3 w-full">
+            <div class="font-medium">
+              <a
+                href="javascript:void(0)"
+                class="block text-gray-700 sm:truncate"
+                >Portfolio ui design web development and Graphic</a
+              >
+              <p class="table text-sm text-gray-500 leading-5 truncate">
+                Fri, June 15 , 2021 - 10:50 PM
+              </p>
+            </div>
+          </figcaption>
+        </figure>
+      </main>
+    </section>
+    <section class="w-full p-6" data-type="article__item" id="Relentless">
+      <main
+        class="
+          mx-auto
+          p-7
+          max-w-screen-xl
+          rounded-xl
+          border-4 border-gray-500
+          mb-10
+          relative
+          bg-white
+        "
+      >
+        <h1
+          class="
+            text-5xl
+            capitalize
+            table
+            my-6
+            mx-auto
+            font-bold
+            text-gray-800
+            relative
+            text-center
+            leading-snug
+          "
+        >
+          We’re A Relentless Team Passionate About Helping Small Businesses
+          Thrive!
+        </h1>
+        <h2
+          class="
+            text-3xl
+            capitalize
+            table
+            my-6
+            mx-auto
+            font-semibold
+            italic
+            underline
+            text-gray-600
+            relative
+            text-center
+          "
+        >
+          Because Every Good Business Deserves An Opportunity To Succeed.
+        </h2>
+        <a
+          href="#contact"
+          class="
+            py-3
+            px-6
+            rounded-lg
+            bg-yellow-600
+            table
+            font-semibold
+            text-sm
+            my-3
+            mx-auto
+            text-white text-center
+          "
+          >CONTACT US</a
+        >
+      </main>
+    </section>
+    <section
+      class="w-full p-7 bg-cover"
+      style="background-image: url(./assets/images/Group33.png)"
+      id="contact"
+    >
+      <main class="max-w-screen-md mx-auto p-6">
+        <form
+          action=""
+          class="w-full text-white"
+          id="contact__form"
+          data-type="email"
+        >
+          <div class="my-4 grid sm:grid-cols-2 gap-3">
+            <div class="w-full">
+              <label
+                for="username"
+                class="my-2 block font-medium mx-2 text-gray-300"
+                >Your name</label
+              >
+              <input
+                type="text"
+                name="username"
+                id="username"
+                required
+                autocomplete="off"
+                placeholder="example example"
+                class="
+                  bg-gray-600 bg-opacity-30
+                  py-3
+                  px-4
+                  rounded-md
+                  text-sm
+                  mx-1
+                  w-full
+                  font-medium
+                  text-white
+                "
+              />
+            </div>
+            <div class="w-full">
+              <label
+                for="email"
+                class="my-2 block font-medium mx-2 text-gray-300"
+                >E-mail Address</label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                autocomplete="off"
+                placeholder="example@example.com"
+                class="
+                  bg-gray-600 bg-opacity-30
+                  py-3
+                  px-4
+                  rounded-md
+                  text-sm
+                  mx-1
+                  w-full
+                  font-medium
+                  text-white
+                "
+              />
+            </div>
+          </div>
+          <div class="w-full my-4">
+            <label for="phone" class="my-2 block font-medium mx-2 text-gray-300"
+              >Your Phone Number</label
+            >
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              required
+              autocomplete="off"
+              placeholder="xxx xxxx xxx"
+              class="
+                bg-gray-600 bg-opacity-30
+                py-3
+                px-4
+                rounded-md
+                text-sm
+                mx-1
+                w-full
+                text-white
+                font-medium
+              "
+            />
+          </div>
+          <div class="w-full my-4">
+            <label
+              for="message"
+              class="my-2 block font-medium mx-2 text-gray-300"
+              >Message</label
+            >
+            <textarea
+              name="message"
+              id="message"
+              required
+              autocomplete="off"
+              placeholder="Message content.."
+              class="
+                bg-gray-600 bg-opacity-30
+                py-3
+                px-4
+                rounded-md
+                text-sm
+                mx-1
+                w-full
+                text-white
+                font-medium
+                resize-y
+              "
+              style="min-height: 125px"
+            ></textarea>
+          </div>
+          <div class="w-full my-1">
+            <button
+              class="
+                py-2
+                px-4
+                rounded-md
+                bg-yellow-700
+                text-white
+                table
+                ml-auto
+              "
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+      </main>
+    </section>
+
+    <footer class="w-full bg-gray-900" id="footer">
+      <div
+        class="
+          w-full
+          lg:container
+          p-10
+          flex
+          items-center
+          justify-between
+          flex-wrap
+          text-white
+        "
+      >
+        <nav class="p-4">
+          <ul class="list-none">
+            <li class="my-3 p-3">
+              <a href="#">
+                <img
+                  src="./assets/images/logo.png"
+                  alt="logo image"
+                  width="125"
+                  height="45"
+                />
+              </a>
+            </li>
+            <li class="px-3 text-white font-semibold">Follow us →</li>
+            <li class="my-3 p-3">
+              <ul class="list-none">
+                <li class="inline-block mr-1">
+                  <a
+                    href="https://facebook.com"
+                    class="
+                      no-underline
+                      text-xl text-white
+                      p-2
+                      w-10
+                      h-10
+                      flex
+                      items-center
+                      justify-center
+                      border border-white
+                      rounded-lg
+                    "
+                    ><i class="fab fa-facebook"></i
+                  ></a>
+                </li>
+                <li class="inline-block mx-1">
+                  <a
+                    href="https://whatsapp.com"
+                    class="
+                      no-underline
+                      text-xl text-white
+                      p-2
+                      w-10
+                      h-10
+                      flex
+                      items-center
+                      justify-center
+                      border border-white
+                      rounded-lg
+                    "
+                    ><i class="fab fa-whatsapp"></i
+                  ></a>
+                </li>
+                <li class="inline-block mx-1">
+                  <a
+                    href="tel:"
+                    class="
+                      no-underline
+                      text-xl text-white
+                      p-2
+                      w-10
+                      h-10
+                      flex
+                      items-center
+                      justify-center
+                      border border-white
+                      rounded-lg
+                    "
+                    ><i class="far fa-phone-alt"></i
+                  ></a>
+                </li>
+                <li class="inline-block mx-1">
+                  <a
+                    href="tel:"
+                    class="
+                      no-underline
+                      text-xl text-white
+                      p-2
+                      w-10
+                      h-10
+                      flex
+                      items-center
+                      justify-center
+                      border border-white
+                      rounded-lg
+                    "
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                </li>
+                <li class="inline-block mx-1">
+                  <a
+                    href="tel:"
+                    class="
+                      no-underline
+                      text-xl text-white
+                      p-2
+                      w-10
+                      h-10
+                      flex
+                      items-center
+                      justify-center
+                      border border-white
+                      rounded-lg
+                    "
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <nav class="p-4">
+          <ul class="list-none">
+            <li class="my-1 p-1">
+              <a href="#" class="flex items-center justify-start flex-nowrap"
+                ><i
+                  class="
+                    fas
+                    fa-map-marker-alt
+                    font-light
+                    w-10
+                    h-10
+                    flex
+                    items-center
+                    text-xl
+                  "
+                ></i
+                >New York, usa , flat 1</a
+              >
+            </li>
+            <li class="my-1 p-1">
+              <a href="#" class="flex items-center justify-start flex-nowrap"
+                ><i
+                  class="
+                    far
+                    fa-phone-alt
+                    font-light
+                    w-10
+                    h-10
+                    flex
+                    items-center
+                    text-xl
+                  "
+                ></i
+                >+xxx xxxx xxx</a
+              >
+            </li>
+            <li class="my-1 p-1">
+              <a href="#" class="flex items-center justify-start flex-nowrap"
+                ><i
+                  class="
+                    far
+                    fa-envelope
+                    font-light
+                    w-10
+                    h-10
+                    flex
+                    items-center
+                    text-xl
+                  "
+                ></i
+                >example@example.com</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <nav class="p-4">
+          <ul class="list-none">
+            <li class="my-2 p-1 uppercase max-w-xl">
+              do you want to get the latest happenings in the digital world
+              straight into your inbox? if yes, take a step forward abd sign up
+              for our monthly newsletter
+            </li>
+            <li class="my-2 p-1">
+              <form action="" class="w-full">
+                <div class="w-full flex items-center justify-start flex-wrap">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                    autocomplete="off"
+                    placeholder="E-mail Address"
+                    class="
+                      bg-white
+                      py-3
+                      px-4
+                      rounded-md
+                      text-gray-800 text-sm
+                      mx-1
+                      font-medium
+                    "
+                  />
+                  <button
+                    type="submit"
+                    class="
+                      py-3
+                      px-5
+                      bg-yellow-600
+                      text-white
+                      rounded-md
+                      text-sm
+                      mx-1
+                    "
+                  >
+                    SUBSCRIBE
+                  </button>
+                </div>
+              </form>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="container mx-auto py-6 px-4 mt-6 border-t border-gray-800">
+        <p class="text-gray-600 font-medium text-center uppercase">
+          copyright © all right reserved by codusk
+        </p>
+      </div>
+    </footer>
+
+    <button
+      class="
+        indictor__btn
+        flex
+        items-center
+        justify-center
+        flex-nowrap
+        fixed
+        bottom-52
+        right-10
+        transform
+        origin-bottom-right
+        -rotate-90
+      "
+    >
+      <div class="w-10 h-0.5 bg-gray-300 mx-1 overflow-hidden rounded-full">
+        <span class="indicator__elem w-0 bg-gray-800 h-full table ml-auto">
+        </span>
+      </div>
+      <span
+        class="indictor__name font-semibold uppercase text-gray-900"
+        data-type="indictor__title"
+      >
+        BACK TOP
+      </span>
+    </button>
+    <script src="./assets/script/main.js"></script>
+  </body>
+</html>
