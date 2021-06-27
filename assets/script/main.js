@@ -63,13 +63,16 @@ const navBar = document.querySelector(".navBar__container");
 const navAppend = document.querySelector(".navBar__btn--append");
 navBar.querySelector(".navBar__btn").onclick = () => {
   navBar.classList.replace("flex", "hidden");
+  document.body.classList.remove("overflow-y-hidden");
 };
 navAppend.onclick = () => {
   navBar.classList.replace("hidden", "flex");
+  document.body.classList.add("overflow-y-hidden");
 };
 navBar.querySelectorAll("a").forEach((_link) => {
   _link.onclick = () => {
     navBar.classList.replace("flex", "hidden");
+    document.body.classList.remove("overflow-y-hidden");
   };
 });
 // loading indictor
@@ -116,4 +119,30 @@ window.onresize = function () {
 const btnTop = document.querySelector(".indictor__btn");
 btnTop.onclick = () => {
   window.scroll({ top: 0, left: 0, behavior: "smooth" });
+};
+
+window.onscroll = () => {
+  let header = document.querySelector(".codusk__header"),
+    parentHeight = header.parentElement.getBoundingClientRect();
+
+  if (
+    document.documentElement.scrollTop >
+    parentHeight.height - header.getBoundingClientRect().height
+  ) {
+    header.classList.add("bg-white"),
+      header
+        .querySelectorAll(".navBar__lg a")
+        .forEach((a) => a.classList.replace("text-white", "text-gray-800")),
+      header
+        .querySelectorAll(".navBar__btn--append span")
+        .forEach((span) => span.classList.replace("bg-white", "bg-gray-800"));
+  } else {
+    header.classList.remove("bg-white"),
+      header
+        .querySelectorAll(".navBar__lg a")
+        .forEach((a) => a.classList.replace("text-gray-800", "text-white")),
+      header
+        .querySelectorAll(".navBar__btn--append span")
+        .forEach((span) => span.classList.replace("bg-gray-800", "bg-white"));
+  }
 };

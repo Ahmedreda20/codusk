@@ -19,6 +19,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <!-- <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    /> -->
     <link rel="stylesheet" href="./build/style/main.css" />
 
     <title>Codusk :: Technology &#8211; Software Company</title>
@@ -32,8 +36,9 @@
     >
       <header
         class="
+          codusk__header
           w-full
-          absolute
+          fixed
           top-0
           left-1/2
           transform
@@ -167,7 +172,7 @@
               </li>
             </ul>
           </nav>
-          <nav class="hidden md:block">
+          <nav class="navBar__lg hidden md:block">
             <ul class="list-none inline-flex items-center">
               <li class="mx-2">
                 <a
@@ -292,40 +297,6 @@
           >CONTACT US</a
         >
       </main>
-      <nav
-        class="
-          absolute
-          bottom-0
-          transform
-          -translate-x-1/2
-          left-1/2
-          sm:left-6
-          py-4
-          sm:transform-none
-        "
-      >
-        <ul class="list-none">
-          <li class="inline-block mx-2">
-            <a
-              href="https://facebook.com"
-              class="no-underline text-2xl text-white"
-              ><i class="fab fa-facebook"></i
-            ></a>
-          </li>
-          <li class="inline-block mx-2">
-            <a
-              href="https://whatsapp.com"
-              class="no-underline text-2xl text-white"
-              ><i class="fab fa-whatsapp"></i
-            ></a>
-          </li>
-          <li class="inline-block mx-2">
-            <a href="tel:" class="no-underline text-2xl text-white"
-              ><i class="far fa-phone-alt"></i
-            ></a>
-          </li>
-        </ul>
-      </nav>
     </section>
     <section class="w-full lg:container mx-auto p-7" id="about">
       <h3
@@ -821,27 +792,174 @@
         class="
           w-full
           lg:container
-          p-10
+          mx-auto
+          p-6
           flex
           items-center
           justify-between
-          flex-wrap
+          flex-col
           text-white
         "
       >
-        <nav class="p-4">
-          <ul class="list-none">
-            <li class="my-3 p-3">
-              <a href="#">
-                <img
-                  src="./assets/images/logo.png"
-                  alt="logo image"
-                  width="125"
-                  height="45"
-                />
-              </a>
+        <nav class="p-4 w-full lg:container mx-auto">
+          <ul class="list-none md:text-center table mx-auto">
+            <li class="my-2 p-1 uppercase">
+              do you want to get the latest happenings in the digital world
+              straight into your inbox? if yes, take a step forward abd sign up
+              for our monthly newsletter
             </li>
-            <li class="px-3 text-white font-semibold">Follow us →</li>
+            <li class="my-2 p-1 md:mx-auto table w-full sm:w-auto">
+              <form action="" class="w-full">
+                <div class="w-full flex items-center justify-start flex-wrap">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                    autocomplete="off"
+                    placeholder="E-mail Address"
+                    class="
+                      bg-white
+                      py-3
+                      px-4
+                      rounded-md
+                      text-gray-800 text-sm
+                      mx-1
+                      font-medium
+                      md:w-96
+                      my-0.5
+                      w-full
+                      sm:w-auto
+                    "
+                  />
+                  <button
+                    type="submit"
+                    class="
+                      py-3
+                      px-5
+                      bg-yellow-600
+                      text-white
+                      rounded-md
+                      text-sm
+                      mx-1
+                      my-0.5
+                      w-full
+                      sm:w-auto
+                    "
+                  >
+                    SUBSCRIBE
+                  </button>
+                </div>
+              </form>
+            </li>
+          </ul>
+        </nav>
+        <nav class="p-4 w-full lg:container mx-auto">
+          <ul
+            class="
+              list-none
+              flex
+              md:items-center md:justify-evenly
+              flex-wrap flex-col
+              md:flex-row
+            "
+          >
+            <li class="my-1 mx-2 py-1 px-6 text-xl">
+              <a href="#" class="flex items-center justify-start flex-nowrap"
+                ><i
+                  class="
+                    fas
+                    fa-map-marker-alt
+                    font-light
+                    w-10
+                    h-10
+                    flex
+                    items-center
+                    text-xl
+                  "
+                ></i
+                >New York, usa , flat 1</a
+              >
+            </li>
+            <li
+              class="
+                my-1
+                mx-2
+                py-1
+                px-6
+                text-xl
+                md:border-r md:border-l md:border-white
+              "
+            >
+              <a href="#" class="flex items-center justify-start flex-nowrap"
+                ><i
+                  class="
+                    far
+                    fa-phone-alt
+                    font-light
+                    w-10
+                    h-10
+                    flex
+                    items-center
+                    text-xl
+                  "
+                ></i
+                >+xxx xxxx xxx</a
+              >
+            </li>
+            <li class="my-1 mx-2 py-1 px-6 text-xl">
+              <a href="#" class="flex items-center justify-start flex-nowrap"
+                ><i
+                  class="
+                    far
+                    fa-envelope
+                    font-light
+                    w-10
+                    h-10
+                    flex
+                    items-center
+                    text-xl
+                  "
+                ></i
+                >example@example.com</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <nav class="p-4 w-full lg:container mx-auto">
+          <ul
+            class="
+              list-none
+              flex
+              items-center
+              justify-evenly
+              flex-wrap flex-row
+            "
+          >
+            <li class="my-3 p-3">
+              <ul class="list-none py-1">
+                <li class="inline-block m-0.5 text-sm">
+                  <a href="#" class="hover:underline">Privacy</a>
+                </li>
+                <li
+                  class="
+                    inline-block
+                    m-0.5
+                    text-sm
+                    border-r border-l border-white
+                    px-2
+                  "
+                >
+                  <a href="#" class="hover:underline">Terms of use</a>
+                </li>
+                <li class="inline-block m-0.5 text-sm">
+                  <a href="#" class="hover:underline">Return Policy</a>
+                </li>
+              </ul>
+              <p class="text-gray-600 font-medium text-center uppercase">
+                copyright © all right reserved by codusk
+              </p>
+            </li>
             <li class="my-3 p-3">
               <ul class="list-none">
                 <li class="inline-block mr-1">
@@ -938,112 +1056,6 @@
             </li>
           </ul>
         </nav>
-        <nav class="p-4">
-          <ul class="list-none">
-            <li class="my-1 p-1">
-              <a href="#" class="flex items-center justify-start flex-nowrap"
-                ><i
-                  class="
-                    fas
-                    fa-map-marker-alt
-                    font-light
-                    w-10
-                    h-10
-                    flex
-                    items-center
-                    text-xl
-                  "
-                ></i
-                >New York, usa , flat 1</a
-              >
-            </li>
-            <li class="my-1 p-1">
-              <a href="#" class="flex items-center justify-start flex-nowrap"
-                ><i
-                  class="
-                    far
-                    fa-phone-alt
-                    font-light
-                    w-10
-                    h-10
-                    flex
-                    items-center
-                    text-xl
-                  "
-                ></i
-                >+xxx xxxx xxx</a
-              >
-            </li>
-            <li class="my-1 p-1">
-              <a href="#" class="flex items-center justify-start flex-nowrap"
-                ><i
-                  class="
-                    far
-                    fa-envelope
-                    font-light
-                    w-10
-                    h-10
-                    flex
-                    items-center
-                    text-xl
-                  "
-                ></i
-                >example@example.com</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <nav class="p-4">
-          <ul class="list-none">
-            <li class="my-2 p-1 uppercase max-w-xl">
-              do you want to get the latest happenings in the digital world
-              straight into your inbox? if yes, take a step forward abd sign up
-              for our monthly newsletter
-            </li>
-            <li class="my-2 p-1">
-              <form action="" class="w-full">
-                <div class="w-full flex items-center justify-start flex-wrap">
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    required
-                    autocomplete="off"
-                    placeholder="E-mail Address"
-                    class="
-                      bg-white
-                      py-3
-                      px-4
-                      rounded-md
-                      text-gray-800 text-sm
-                      mx-1
-                      font-medium
-                    "
-                  />
-                  <button
-                    type="submit"
-                    class="
-                      py-3
-                      px-5
-                      bg-yellow-600
-                      text-white
-                      rounded-md
-                      text-sm
-                      mx-1
-                    "
-                  >
-                    SUBSCRIBE
-                  </button>
-                </div>
-              </form>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="container mx-auto py-6 px-4 mt-6 border-t border-gray-800">
-        <p class="text-gray-600 font-medium text-center uppercase">
-          copyright © all right reserved by codusk
-        </p>
       </div>
     </footer>
 
