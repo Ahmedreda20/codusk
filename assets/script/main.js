@@ -151,11 +151,16 @@ const servicesItems = document.querySelectorAll(".services__items a");
 const servicesViewer = document.querySelector(".services__viewer");
 servicesItems.forEach((service, serviceIndex) => {
   service.onclick = (e) => {
+    e.preventDefault();
+
+    scrollDownToCurrentSectionViewer(servicesViewer);
+    // get children's from their parent element with current index
     let currentService = servicesItems[serviceIndex],
       title = currentService.querySelector("h2"),
       content = currentService.querySelector("p"),
       image = currentService.querySelector("img");
-    // service.classList.remove("active__service--view");
+    // get window width
+
     servicesItems.forEach((serviceClass) =>
       serviceClass.classList.remove("active__service--view")
     );
@@ -167,6 +172,14 @@ window.onload = () => {
   appendElementsServicesInsideSectionViewer(0);
 };
 
+function scrollDownToCurrentSectionViewer(viewer) {
+  let header = document.querySelector(".codusk__header");
+  window.scroll({
+    top: viewer.offsetTop - header.getBoundingClientRect().height - 50,
+    left: 0,
+    behavior: "smooth",
+  });
+}
 function appendElementsServicesInsideSectionViewer(index) {
   let currentService = servicesItems[index],
     title = currentService.querySelector("h2"),
@@ -196,6 +209,22 @@ function appendElementsServicesInsideSectionViewer(index) {
               <p class="text-gray-600 font-medium text-sm">
                 Lorem ipsum dolor sit amet.
               </p>
-            </div>
-            </div>`;
+              </div>
+              
+              </div>
+              <button class="back__services bg-gray-200 uppercase lg:hidden block my-3 text-gray-600 py-3 px-6 rounded-lg text-sm font-semibold ml-auto" data-index="${index}">
+              Back to service item
+              </button>`;
+
+  let btnServices = document.querySelector(".back__services");
+  btnServices.onclick = () => {
+    let header = document.querySelector(".codusk__header"),
+      servicesItemBox = servicesItems[index];
+    window.scroll({
+      top:
+        servicesItemBox.offsetTop - header.getBoundingClientRect().height - 50,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
 }
