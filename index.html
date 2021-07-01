@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./favicon-new.png" type="image/png" />
+    <link rel="icon" href="./favicon.png" type="image/png" />
     <!-- import fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,6 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./build/style/current__style.css" />
     <!-- <link
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
@@ -278,8 +279,12 @@
           lg:-translate-y-1/2
         "
       >
-        <h2 class="text-4xl font-medium">Your It Business Partner</h2>
-        <h1 class="text-6xl font-bold py-3">Codusk Means Solutions.</h1>
+        <h2 class="text-2xl sm:text-4xl font-medium">
+          Your It Business Partner
+        </h2>
+        <h1 class="text-4xl sm:text-6xl font-bold py-3">
+          Codusk Means Solutions.
+        </h1>
         <a
           href="#contact"
           class="
@@ -436,113 +441,243 @@
       >
         What We Do
       </h1>
-      <main class="sm:grid gap-5 my-10" data-type="grid__container">
-        <a
-          href="#services"
-          class="w-full h-auto rounded-xl bg-white text-center p-6"
-          data-type="services"
+      <main
+        class="sm:grid grid-cols-1 md:grid-cols-2 gap-5 my-10"
+        data-type="grid__container"
+      >
+        <div
+          class="
+            services__items
+            w-full
+            p-2
+            h-auto
+            overflow-y-auto overflow-x-hidden
+          "
         >
-          <img
-            src="./assets/images/Web.png"
-            alt="web development image"
-            width="60"
-            height="60"
-            class="mb-6 table mx-auto"
-          />
-          <h2 class="text-xl text-gray-800 font-bold p-3 capitalize">
-            web development
-          </h2>
-          <p class="text-sm font-medium text-gray-500">
-            CODUSK Tech. has a team of proficient web designers and developers.
-            It is the diligence of our developers that has enabled us to be the
-            best at providing digital services. We derive dynamic designs for
-            brands worldwide.
-          </p>
-        </a>
-        <a
-          href="#services"
-          class="w-full h-auto rounded-xl bg-white text-center p-6"
-          data-type="services"
+          <a
+            href="#services__viewer"
+            class="
+              w-full
+              h-auto
+              rounded-xl
+              bg-white
+              text-left
+              px-6
+              py-3
+              flex
+              items-center
+              justify-start
+              flex-row flex-nowrap
+              border border-gray-300
+              my-2
+              transition
+              ease-in-out
+              duration-300
+              transform
+              hover:scale-95
+            "
+            data-type="services"
+          >
+            <img
+              src="./assets/images/Web.png"
+              alt="web development image"
+              width="60"
+              height="60"
+              class="mb-6 table mx-auto"
+            />
+            <div class="w-auto table px-3">
+              <h2 class="text-xl text-gray-800 font-bold py-3 capitalize">
+                web development
+              </h2>
+              <p class="text-sm font-medium text-gray-500">
+                CODUSK Tech. has a team of proficient web designers and
+                developers. It is the diligence of our developers that has
+                enabled us to be the best at providing digital services. We
+                derive dynamic designs for brands worldwide.
+              </p>
+            </div>
+          </a>
+          <a
+            href="#services__viewer"
+            class="
+              w-full
+              h-auto
+              rounded-xl
+              bg-white
+              text-left
+              px-6
+              py-3
+              flex
+              items-center
+              justify-start
+              flex-row flex-nowrap
+              border border-gray-300
+              my-2
+              transition
+              ease-in-out
+              duration-300
+              transform
+              hover:scale-95
+            "
+            data-type="services"
+          >
+            <img
+              src="./assets/images/Text Box.png"
+              alt="web development image"
+              width="60"
+              height="60"
+              class="mb-6 table mx-auto"
+            />
+            <div class="w-auto table px-3">
+              <h2 class="text-xl text-gray-800 font-bold py-3 capitalize">
+                Graphics Designing
+              </h2>
+              <p class="text-sm font-medium text-gray-500">
+                Graphic Designing is our forte. Our design teams are located
+                across the globe with a mission to leave a lasting impact on the
+                corporate world, we bring our skilled artists to earn your brand
+                the name it deserves.
+              </p>
+            </div>
+          </a>
+          <a
+            href="#services__viewer"
+            class="
+              w-full
+              h-auto
+              rounded-xl
+              bg-white
+              text-left
+              px-6
+              py-3
+              flex
+              items-center
+              justify-start
+              flex-row flex-nowrap
+              border border-gray-300
+              my-2
+              transition
+              ease-in-out
+              duration-300
+              transform
+              hover:scale-95
+            "
+            data-type="services"
+          >
+            <img
+              src="./assets/images/WordPress.png"
+              alt="web development image"
+              width="60"
+              height="60"
+              class="mb-6 table mx-auto"
+            />
+            <div class="w-auto table px-3">
+              <h2 class="text-xl text-gray-800 font-bold py-3 capitalize">
+                WordPress Development
+              </h2>
+              <p class="text-sm font-medium text-gray-500">
+                We use all the information gathered in the first phase to come
+                up with a plan for the website.
+              </p>
+            </div>
+          </a>
+          <a
+            href="#services__viewer"
+            class="
+              w-full
+              h-auto
+              rounded-xl
+              bg-white
+              text-left
+              px-6
+              py-3
+              flex
+              items-center
+              justify-start
+              flex-row flex-nowrap
+              border border-gray-300
+              my-2
+              transition
+              ease-in-out
+              duration-300
+              transform
+              hover:scale-95
+            "
+            data-type="services"
+          >
+            <img
+              src="./assets/images/Paid Search.png"
+              alt="web development image"
+              width="60"
+              height="60"
+              class="mb-6 table mx-auto"
+            />
+            <div class="w-auto table px-3">
+              <h2 class="text-xl text-gray-800 font-bold py-3 capitalize">
+                Digital Marketing
+              </h2>
+              <p class="text-sm font-medium text-gray-500">
+                Our Marketers are specialists who keep a record of the changing
+                trends of the tech world. With an ethical approach to branding,
+                these individuals work tirelessly to market your brand well
+                enough to overthrow your competition.
+              </p>
+            </div>
+          </a>
+          <a
+            href="#services__viewer"
+            class="
+              w-full
+              h-auto
+              rounded-xl
+              bg-white
+              text-left
+              px-6
+              py-3
+              flex
+              items-center
+              justify-start
+              flex-row flex-nowrap
+              border border-gray-300
+              my-2
+              transition
+              ease-in-out
+              duration-300
+              transform
+              hover:scale-95
+            "
+            data-type="services"
+          >
+            <img
+              src="./assets/images/Design.png"
+              alt="web development image"
+              width="60"
+              height="60"
+              class="mb-6 table mx-auto"
+            />
+            <div class="w-auto table px-3">
+              <h2 class="text-xl text-gray-800 font-bold py-3 capitalize">
+                UI \ UX Designing
+              </h2>
+              <p class="text-sm font-medium text-gray-500">
+                We use all the information gathered in the first phase to come
+                up with a plan for the website.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div
+          class="
+            services__viewer
+            w-full
+            p-2
+            h-auto
+            overflow-y-auto overflow-x-hidden
+          "
+          id="services__viewer"
         >
-          <img
-            src="./assets/images/Text Box.png"
-            alt="web development image"
-            width="60"
-            height="60"
-            class="mb-6 table mx-auto"
-          />
-          <h2 class="text-xl text-gray-800 font-bold p-3 capitalize">
-            Graphics Designing
-          </h2>
-          <p class="text-sm font-medium text-gray-500">
-            Graphic Designing is our forte. Our design teams are located across
-            the globe with a mission to leave a lasting impact on the corporate
-            world, we bring our skilled artists to earn your brand the name it
-            deserves.
-          </p>
-        </a>
-        <a
-          href="#services"
-          class="w-full h-auto rounded-xl bg-white text-center p-6"
-          data-type="services"
-        >
-          <img
-            src="./assets/images/WordPress.png"
-            alt="web development image"
-            width="60"
-            height="60"
-            class="mb-6 table mx-auto"
-          />
-          <h2 class="text-xl text-gray-800 font-bold p-3 capitalize">
-            WordPress Development
-          </h2>
-          <p class="text-sm font-medium text-gray-500">
-            We use all the information gathered in the first phase to come up
-            with a plan for the website.
-          </p>
-        </a>
-        <a
-          href="#services"
-          class="w-full h-auto rounded-xl bg-white text-center p-6"
-          data-type="services"
-        >
-          <img
-            src="./assets/images/Paid Search.png"
-            alt="web development image"
-            width="60"
-            height="60"
-            class="mb-6 table mx-auto"
-          />
-          <h2 class="text-xl text-gray-800 font-bold p-3 capitalize">
-            Digital Marketing
-          </h2>
-          <p class="text-sm font-medium text-gray-500">
-            Our Marketers are specialists who keep a record of the changing
-            trends of the tech world. With an ethical approach to branding,
-            these individuals work tirelessly to market your brand well enough
-            to overthrow your competition.
-          </p>
-        </a>
-        <a
-          href="#services"
-          class="w-full h-auto rounded-xl bg-white text-center p-6"
-          data-type="services"
-        >
-          <img
-            src="./assets/images/Design.png"
-            alt="web development image"
-            width="60"
-            height="60"
-            class="mb-6 table mx-auto"
-          />
-          <h2 class="text-xl text-gray-800 font-bold p-3 capitalize">
-            UI \ UX Designing
-          </h2>
-          <p class="text-sm font-medium text-gray-500">
-            We use all the information gathered in the first phase to come up
-            with a plan for the website.
-          </p>
-        </a>
+          <!-- viewer content -->
+        </div>
       </main>
     </section>
     <section class="w-full lg:container mx-auto p-7" id="portfolio">
@@ -601,7 +736,8 @@
       >
         <h1
           class="
-            text-5xl
+            sm:text-5xl
+            text-3xl
             capitalize
             table
             my-6
@@ -618,7 +754,8 @@
         </h1>
         <h2
           class="
-            text-3xl
+            sm:text-3xl
+            text-2xl
             capitalize
             table
             my-6
@@ -656,7 +793,7 @@
       style="background-image: url(./assets/images/Group33.png)"
       id="contact"
     >
-      <main class="max-w-screen-md mx-auto p-6">
+      <main class="max-w-screen-md mx-auto py-2 sm:p-6">
         <form
           action=""
           class="w-full text-white"
@@ -683,7 +820,7 @@
                   px-4
                   rounded-md
                   text-sm
-                  mx-1
+                  sm:mx-1
                   w-full
                   font-medium
                   text-white
@@ -709,7 +846,7 @@
                   px-4
                   rounded-md
                   text-sm
-                  mx-1
+                  sm:mx-1
                   w-full
                   font-medium
                   text-white
@@ -734,7 +871,7 @@
                 px-4
                 rounded-md
                 text-sm
-                mx-1
+                sm:mx-1
                 w-full
                 text-white
                 font-medium
@@ -759,7 +896,7 @@
                 px-4
                 rounded-md
                 text-sm
-                mx-1
+                sm:mx-1
                 w-full
                 text-white
                 font-medium
@@ -888,6 +1025,8 @@
                 py-1
                 px-6
                 text-xl
+                mr-2
+                max-w-10
                 md:border-r md:border-l md:border-white
               "
             >
@@ -902,13 +1041,17 @@
                     flex
                     items-center
                     text-xl
+                    mr-2
+                    max-w-10
                   "
                 ></i
                 >+xxx xxxx xxx</a
               >
             </li>
             <li class="my-1 mx-2 py-1 px-6 text-xl">
-              <a href="#" class="flex items-center justify-start flex-nowrap"
+              <a
+                href="#"
+                class="flex items-center justify-start flex-nowrap break-all"
                 ><i
                   class="
                     far
@@ -919,6 +1062,8 @@
                     flex
                     items-center
                     text-xl
+                    mr-2
+                    max-w-10
                   "
                 ></i
                 >example@example.com</a
@@ -937,7 +1082,7 @@
             "
           >
             <li class="my-3 p-3">
-              <ul class="list-none py-1">
+              <ul class="list-none py-1 text-center">
                 <li class="inline-block m-0.5 text-sm">
                   <a href="#" class="hover:underline">Privacy</a>
                 </li>
@@ -962,7 +1107,7 @@
             </li>
             <li class="my-3 p-3">
               <ul class="list-none">
-                <li class="inline-block mr-1">
+                <li class="inline-block m-1">
                   <a
                     href="https://facebook.com"
                     class="
@@ -980,7 +1125,7 @@
                     ><i class="fab fa-facebook"></i
                   ></a>
                 </li>
-                <li class="inline-block mx-1">
+                <li class="inline-block m-1">
                   <a
                     href="https://whatsapp.com"
                     class="
@@ -998,7 +1143,7 @@
                     ><i class="fab fa-whatsapp"></i
                   ></a>
                 </li>
-                <li class="inline-block mx-1">
+                <li class="inline-block m-1">
                   <a
                     href="tel:"
                     class="
@@ -1016,7 +1161,7 @@
                     ><i class="far fa-phone-alt"></i
                   ></a>
                 </li>
-                <li class="inline-block mx-1">
+                <li class="inline-block m-1">
                   <a
                     href="tel:"
                     class="
@@ -1034,7 +1179,7 @@
                     ><i class="fab fa-twitter"></i
                   ></a>
                 </li>
-                <li class="inline-block mx-1">
+                <li class="inline-block m-1">
                   <a
                     href="tel:"
                     class="

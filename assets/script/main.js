@@ -146,3 +146,56 @@ window.onscroll = () => {
         .forEach((span) => span.classList.replace("bg-gray-800", "bg-white"));
   }
 };
+
+const servicesItems = document.querySelectorAll(".services__items a");
+const servicesViewer = document.querySelector(".services__viewer");
+servicesItems.forEach((service, serviceIndex) => {
+  service.onclick = (e) => {
+    let currentService = servicesItems[serviceIndex],
+      title = currentService.querySelector("h2"),
+      content = currentService.querySelector("p"),
+      image = currentService.querySelector("img");
+    // service.classList.remove("active__service--view");
+    servicesItems.forEach((serviceClass) =>
+      serviceClass.classList.remove("active__service--view")
+    );
+    appendElementsServicesInsideSectionViewer(serviceIndex);
+  };
+});
+
+window.onload = () => {
+  appendElementsServicesInsideSectionViewer(0);
+};
+
+function appendElementsServicesInsideSectionViewer(index) {
+  let currentService = servicesItems[index],
+    title = currentService.querySelector("h2"),
+    content = currentService.querySelector("p"),
+    image = currentService.querySelector("img");
+  currentService.classList.add("active__service--view");
+  servicesViewer.innerHTML = `<h2 class="text-2xl font-bold capitalize">${title.innerHTML}</h2>
+          <p class="text-gray-500 py-4 px-6 font-medium relative">
+            <img
+              src="./assets/images/quote.svg"
+              alt="quote image"
+              class="absolute top-3 left-0"
+              width="12"
+              height="12"
+            />
+            ${content.innerHTML}
+          </p>
+          <div class="grid gap-3 w-full" data-type="grid__services">
+            <div class="text-center p-3 rounded-xl border border-gray-300">
+              <img
+                src="${image.src}"
+                alt="${image.alt} image"
+                width="60"
+                height="60"
+                class="mb-6 table mx-auto"
+              />
+              <p class="text-gray-600 font-medium text-sm">
+                Lorem ipsum dolor sit amet.
+              </p>
+            </div>
+            </div>`;
+}
