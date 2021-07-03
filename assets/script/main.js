@@ -212,7 +212,7 @@ function appendElementsServicesInsideSectionViewer(index) {
               </div>
               
               </div>
-              <button class="back__services bg-gray-200 uppercase lg:hidden block my-3 text-gray-600 py-3 px-6 rounded-lg text-sm font-semibold ml-auto" data-index="${index}">
+              <button class="back__services bg-gray-200 uppercase lg:hidden block my-3 text-gray-600 py-3 px-6 rounded-lg text-sm font-semibold ml-auto">
               Back to service item
               </button>`;
 

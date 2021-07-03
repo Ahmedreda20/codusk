@@ -37,7 +37,7 @@ button {
   grid-template-columns: auto 50px;
 }
 [data-type="services"] {
-  box-shadow: 0 0 40px rgba(204, 204, 204, 0.171);
+  box-shadow: 0 0 50px rgba(204, 204, 204, 0.384);
 }
 [data-type="article__item"] main::after {
   position: absolute;
