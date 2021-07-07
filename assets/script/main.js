@@ -187,15 +187,19 @@ function appendElementsServicesInsideSectionViewer(index) {
     item.classList.replace("block", "hidden");
   });
   currentItem.classList.replace("hidden", "block");
-  let btnServices = document.querySelector(".back__services");
-  btnServices.onclick = () => {
-    let header = document.querySelector(".codusk__header"),
-      servicesItemBox = servicesItems[index];
-    window.scroll({
-      top:
-        servicesItemBox.offsetTop - header.getBoundingClientRect().height - 50,
-      left: 0,
-      behavior: "smooth",
-    });
-  };
+  let btnServices = document.querySelectorAll(".back__services");
+  btnServices.forEach((btn) => {
+    btn.onclick = () => {
+      let header = document.querySelector(".codusk__header"),
+        servicesItemBox = servicesItems[index];
+      window.scroll({
+        top:
+          servicesItemBox.offsetTop -
+          header.getBoundingClientRect().height -
+          50,
+        left: 0,
+        behavior: "smooth",
+      });
+    };
+  });
 }
