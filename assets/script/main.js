@@ -148,17 +148,15 @@ window.onscroll = () => {
 };
 
 const servicesItems = document.querySelectorAll(".services__items a");
-const servicesViewer = document.querySelector(".services__viewer");
+const servicesViewer = document.querySelector(".services__viewer--container");
+const serviceViewerItems = document.querySelectorAll(".service__viewer--item ");
 servicesItems.forEach((service, serviceIndex) => {
   service.onclick = (e) => {
     e.preventDefault();
 
     scrollDownToCurrentSectionViewer(servicesViewer);
     // get children's from their parent element with current index
-    let currentService = servicesItems[serviceIndex],
-      title = currentService.querySelector("h2"),
-      content = currentService.querySelector("p"),
-      image = currentService.querySelector("img");
+    let currentService = servicesItems[serviceIndex];
     // get window width
 
     servicesItems.forEach((serviceClass) =>
@@ -181,41 +179,14 @@ function scrollDownToCurrentSectionViewer(viewer) {
   });
 }
 function appendElementsServicesInsideSectionViewer(index) {
-  let currentService = servicesItems[index],
-    title = currentService.querySelector("h2"),
-    content = currentService.querySelector("p"),
-    image = currentService.querySelector("img");
+  console.log(serviceViewerItems);
+  let currentService = servicesItems[index];
+  let currentItem = serviceViewerItems[index];
   currentService.classList.add("active__service--view");
-  servicesViewer.innerHTML = `<h2 class="text-2xl font-bold capitalize">${title.innerHTML}</h2>
-          <p class="text-gray-500 py-4 px-6 font-medium relative">
-            <img
-              src="./assets/images/quote.svg"
-              alt="quote image"
-              class="absolute top-3 left-0"
-              width="12"
-              height="12"
-            />
-            ${content.innerHTML}
-          </p>
-          <div class="grid gap-3 w-full" data-type="grid__services">
-            <div class="text-center p-3 rounded-xl border border-gray-300">
-              <img
-                src="${image.src}"
-                alt="${image.alt} image"
-                width="60"
-                height="60"
-                class="mb-6 table mx-auto"
-              />
-              <p class="text-gray-600 font-medium text-sm">
-                Lorem ipsum dolor sit amet.
-              </p>
-              </div>
-              
-              </div>
-              <button class="back__services bg-gray-200 uppercase lg:hidden block my-3 text-gray-600 py-3 px-6 rounded-lg text-sm font-semibold ml-auto">
-              Back to service item
-              </button>`;
-
+  serviceViewerItems.forEach((item) => {
+    item.classList.replace("block", "hidden");
+  });
+  currentItem.classList.replace("hidden", "block");
   let btnServices = document.querySelector(".back__services");
   btnServices.onclick = () => {
     let header = document.querySelector(".codusk__header"),

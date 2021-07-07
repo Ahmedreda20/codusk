@@ -36,7 +36,7 @@ button {
 [data-type="portfolio"] {
   grid-template-columns: auto 50px;
 }
-[data-type="services"] {
+main :is([data-type="services"], .service__img) {
   box-shadow: 0 0 50px rgba(204, 204, 204, 0.384);
 }
 [data-type="article__item"] main::after {
