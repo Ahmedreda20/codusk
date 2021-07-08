@@ -203,3 +203,26 @@ function appendElementsServicesInsideSectionViewer(index) {
     };
   });
 }
+
+// active link
+
+const navBarLgLinks = document.querySelectorAll(".navBar__lg a");
+
+navBarLgLinks.forEach((navLink) => {
+  navLink.onclick = () => checkCurrentHrefWithCurrentURI(navLink);
+});
+
+window.onload = () => {
+  navBarLgLinks.forEach((navLinkLoad) => {
+    checkCurrentHrefWithCurrentURI(navLinkLoad);
+  });
+};
+function checkCurrentHrefWithCurrentURI(url) {
+  let currentLocation = window.location.origin;
+  navBarLgLinks.forEach((link) => {
+    link.classList.remove("active__header--link");
+  });
+  currentLocation.indexOf(url.href) <= 0
+    ? url.classList.add("active__header--link")
+    : url.classList.remove("active__header--link");
+}

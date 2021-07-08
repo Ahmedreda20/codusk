@@ -2,10 +2,10 @@
 *::after,
 *::before {
   outline: none !important;
+  scroll-behavior: smooth !important;
 }
 .font-lato {
   font-family: "Poppins", sans-serif !important;
-  scroll-behavior: smooth;
 }
 input,
 textarea,
@@ -61,4 +61,35 @@ main :is([data-type="services"], .service__img) {
 }
 .active__service--view p {
   color: #f3f4f6 !important;
+}
+
+.active__header--link::after {
+  position: absolute;
+  content: "";
+  width: calc(100% - 10px);
+  height: 7px;
+  background-color: rgb(21, 28, 37, 0.5);
+  z-index: -1;
+  bottom: 5px;
+  left: 50%;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  animation: load 0.5s;
+  -webkit-animation: load 0.5s;
+  -moz-animation: load 0.5s;
+  -ms-animation: load 0.5s;
+  -o-animation: load 0.5s;
+}
+
+@keyframes load {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: calc(100% - 10px);
+  }
 }
