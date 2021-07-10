@@ -179,7 +179,6 @@ function scrollDownToCurrentSectionViewer(viewer) {
   });
 }
 function appendElementsServicesInsideSectionViewer(index) {
-  console.log(serviceViewerItems);
   let currentService = servicesItems[index];
   let currentItem = serviceViewerItems[index];
   currentService.classList.add("active__service--view");
@@ -205,18 +204,12 @@ function appendElementsServicesInsideSectionViewer(index) {
 }
 
 // active link
-
 const navBarLgLinks = document.querySelectorAll(".navBar__lg a");
 
 navBarLgLinks.forEach((navLink) => {
   navLink.onclick = () => checkCurrentHrefWithCurrentURI(navLink);
 });
 
-window.onload = () => {
-  navBarLgLinks.forEach((navLinkLoad) => {
-    checkCurrentHrefWithCurrentURI(navLinkLoad);
-  });
-};
 function checkCurrentHrefWithCurrentURI(url) {
   let currentLocation = window.location.origin;
   navBarLgLinks.forEach((link) => {
@@ -226,3 +219,13 @@ function checkCurrentHrefWithCurrentURI(url) {
     ? url.classList.add("active__header--link")
     : url.classList.remove("active__header--link");
 }
+
+// hide preload after page load
+
+function HidePreload(elem) {
+  elem.classList.replace("flex", "hidden");
+}
+
+window.onload = () => {
+  HidePreload(document.querySelector(".preload__container"));
+};
