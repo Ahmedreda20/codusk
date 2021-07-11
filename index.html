@@ -8,6 +8,14 @@
     <!-- import fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -18,6 +26,16 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
+    />
+    <!-- bootstrap cdn link css -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    /> -->
+    <!-- pretty photo cdn link css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/prettyphoto/3.1.6/css/prettyPhoto.css"
     />
     <link rel="stylesheet" href="./build/style/current__style.css" />
     <link
@@ -46,12 +64,28 @@
       "
     >
       <main class="w-auto p-3 flex items-center justify-center flex-col">
-        <div class="preload__spinner"></div>
-        <span
-          class="text-center text-sm font-medium py-3 my-1 text-gray-700 table"
-        >
-          Loading...
-        </span>
+        <div class="preload__spinner">
+          <svg
+            width="73"
+            height="79"
+            viewBox="0 0 73 79"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M61.8877 39.3922C61.8877 51.8161 51.8161 61.8877 39.3922 61.8877C26.9683 61.8877 16.8968 51.8161 16.8968 39.3922C16.8968 26.9683 26.9683 16.8968 39.3922 16.8968C51.8161 16.8968 61.8877 26.9683 61.8877 39.3922Z"
+              stroke="#fff"
+              stroke-width="2"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M71 61.191C64.073 71.2159 52.4997 77.7845 39.3922 77.7845C18.1888 77.7845 1 60.5957 1 39.3922C1 18.1888 18.1888 1 39.3922 1C52.4997 1 64.073 7.56855 71 17.5935L63.6956 21.8107C58.2456 14.29 49.3902 9.3983 39.3922 9.3983C22.8271 9.3983 9.3983 22.8271 9.3983 39.3922C9.3983 55.9574 22.8271 69.3862 39.3922 69.3862C49.3902 69.3862 58.2456 64.4944 63.6956 56.9738L71 61.191Z"
+              stroke="#fff"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
       </main>
     </section>
     <section
@@ -1123,29 +1157,521 @@
         <span class="text-gray-700 text-xl">#</span>
         <span class="indictor__title">PORTFOLIO</span>
       </h3>
+      <div class="w-auto table p-3 my-3 mb-5 mx-auto">
+        <div
+          class="
+            w-auto
+            h-auto
+            flex
+            items-center
+            justify-center
+            flex-row flex-wrap
+          "
+        >
+          <button
+            class="
+              btn__portfolio--active btn__portfolio--filter
+              py-2
+              px-6
+              font-medium
+              text-sm text-gray-700
+              transition
+              ease-in-out
+              duration-300
+              relative
+            "
+            data-portfolio-type="all"
+          >
+            All
+          </button>
+          <button
+            class="
+              btn__portfolio--filter
+              py-2
+              px-6
+              font-medium
+              text-sm text-gray-700
+              transition
+              ease-in-out
+              duration-300
+              relative
+            "
+            data-portfolio-type="graphic"
+          >
+            Graphic
+          </button>
+          <button
+            class="
+              btn__portfolio--filter
+              py-2
+              px-6
+              font-medium
+              text-sm text-gray-700
+              transition
+              ease-in-out
+              duration-300
+              relative
+            "
+            data-portfolio-type="wordpress"
+          >
+            WordPress
+          </button>
+          <button
+            class="
+              btn__portfolio--filter
+              py-2
+              px-6
+              font-medium
+              text-sm text-gray-700
+              transition
+              ease-in-out
+              duration-300
+              relative
+            "
+            data-portfolio-type="digital"
+          >
+            Digital Marketing
+          </button>
+          <button
+            class="
+              btn__portfolio--filter
+              py-2
+              px-6
+              font-medium
+              text-sm text-gray-700
+              transition
+              ease-in-out
+              duration-300
+              relative
+            "
+            data-portfolio-type="ui"
+          >
+            UI \ UX
+          </button>
+        </div>
+      </div>
       <main class="sm:grid gap-5 my-10" data-type="grid__container">
-        <figure class="w-full">
-          <blockquote class="w-full">
+        <figure
+          class="
+            w-full
+            h-auto
+            md:h-80
+            relative
+            rounded-2xl
+            overflow-hidden
+            portfolio__item
+            transform
+            transition
+            ease-in-out
+            duration-500
+            cursor-pointer
+            hover:shadow-lg
+          "
+          data-portfolio-type="ui"
+        >
+          <blockquote class="w-full h-full">
             <img
               src="./assets/images/portfolio.png"
+              data-src="./assets/images/portfolio.png"
+              data-type="portfolio__img"
               alt="portfolio image"
-              class="w-full h-auto rounded-2xl mb-3 object-cover"
+              class="w-full h-full object-cover portfolio__img"
             />
           </blockquote>
-          <figcaption class="p-3 w-full">
-            <div class="font-medium">
-              <a
-                href="javascript:void(0)"
-                class="block text-gray-700 sm:truncate"
-                >Portfolio ui design web development and Graphic</a
-              >
-              <p class="table text-sm text-gray-500 leading-5 truncate">
-                Fri, June 15 , 2021 - 10:50 PM
-              </p>
-            </div>
-          </figcaption>
+        </figure>
+        <figure
+          class="
+            w-full
+            h-auto
+            md:h-80
+            relative
+            rounded-2xl
+            overflow-hidden
+            portfolio__item
+            transform
+            transition
+            ease-in-out
+            duration-500
+            cursor-pointer
+            hover:shadow-lg
+          "
+          data-portfolio-type="logo"
+        >
+          <blockquote class="w-full h-full">
+            <img
+              src="./assets/images/portfolio/logo-p.jpg"
+              data-src="./assets/images/portfolio/logo-p.jpg"
+              data-type="portfolio__img"
+              alt="portfolio image"
+              class="w-full h-full object-cover portfolio__img"
+            />
+          </blockquote>
+        </figure>
+        <figure
+          class="
+            w-full
+            h-auto
+            md:h-80
+            relative
+            rounded-2xl
+            overflow-hidden
+            portfolio__item
+            transform
+            transition
+            ease-in-out
+            duration-500
+            cursor-pointer
+            hover:shadow-lg
+          "
+          data-portfolio-type="ui"
+        >
+          <blockquote class="w-full h-full">
+            <img
+              src="./assets/images/portfolio/ui.jpg"
+              data-src="./assets/images/portfolio/ui.jpg"
+              data-type="portfolio__img"
+              alt="portfolio image"
+              class="w-full h-full object-cover portfolio__img"
+            />
+          </blockquote>
+        </figure>
+        <figure
+          class="
+            w-full
+            h-auto
+            md:h-80
+            relative
+            rounded-2xl
+            overflow-hidden
+            portfolio__item
+            transform
+            transition
+            ease-in-out
+            duration-500
+            cursor-pointer
+            hover:shadow-lg
+          "
+          data-portfolio-type="digital"
+        >
+          <blockquote class="w-full h-full">
+            <img
+              src="./assets/images/portfolio/digital.jpg"
+              data-src="./assets/images/portfolio/digital.jpg"
+              data-type="portfolio__img"
+              alt="portfolio image"
+              class="w-full h-full object-cover portfolio__img"
+            />
+          </blockquote>
+        </figure>
+        <figure
+          class="
+            w-full
+            h-auto
+            md:h-80
+            relative
+            rounded-2xl
+            overflow-hidden
+            portfolio__item
+            transform
+            transition
+            ease-in-out
+            duration-500
+            cursor-pointer
+            hover:shadow-lg
+          "
+          data-portfolio-type="wordpress"
+        >
+          <blockquote class="w-full h-full">
+            <img
+              src="./assets/images/portfolio/wordpress.jpg"
+              data-src="./assets/images/portfolio/wordpress.jpg"
+              data-type="portfolio__img"
+              alt="portfolio image"
+              class="w-full h-full object-cover portfolio__img"
+            />
+          </blockquote>
+        </figure>
+        <figure
+          class="
+            w-full
+            h-auto
+            md:h-80
+            relative
+            rounded-2xl
+            overflow-hidden
+            portfolio__item
+            transform
+            transition
+            ease-in-out
+            duration-500
+            cursor-pointer
+            hover:shadow-lg
+          "
+          data-portfolio-type="logo"
+        >
+          <blockquote class="w-full h-full">
+            <img
+              src="./assets/images/portfolio/logo-p.png"
+              data-src="./assets/images/portfolio/logo-p.png"
+              data-type="portfolio__img"
+              alt="portfolio image"
+              class="w-full h-full object-cover portfolio__img"
+            />
+          </blockquote>
+        </figure>
+        <figure
+          class="
+            w-full
+            h-auto
+            md:h-80
+            relative
+            rounded-2xl
+            overflow-hidden
+            portfolio__item
+            transform
+            transition
+            ease-in-out
+            duration-500
+            cursor-pointer
+            hover:shadow-lg
+          "
+          data-portfolio-type="logo"
+        >
+          <blockquote class="w-full h-full">
+            <img
+              src="./assets/images/portfolio/logo1.png"
+              data-src="./assets/images/portfolio/logo1.png"
+              data-type="portfolio__img"
+              alt="portfolio image"
+              class="w-full h-full object-cover portfolio__img"
+            />
+          </blockquote>
+        </figure>
+        <figure
+          class="
+            w-full
+            h-auto
+            md:h-80
+            relative
+            rounded-2xl
+            overflow-hidden
+            portfolio__item
+            transform
+            transition
+            ease-in-out
+            duration-500
+            cursor-pointer
+            hover:shadow-lg
+          "
+          data-portfolio-type="graphic"
+        >
+          <blockquote class="w-full h-full">
+            <img
+              src="./assets/images/portfolio/graphic.jpg"
+              data-src="./assets/images/portfolio/graphic.jpg"
+              data-type="portfolio__img"
+              alt="portfolio image"
+              class="w-full h-full object-cover portfolio__img"
+            />
+          </blockquote>
+        </figure>
+        <figure
+          class="
+            w-full
+            h-auto
+            md:h-80
+            relative
+            rounded-2xl
+            overflow-hidden
+            portfolio__item
+            transform
+            transition
+            ease-in-out
+            duration-500
+            cursor-pointer
+            hover:shadow-lg
+          "
+          data-portfolio-type="graphic"
+        >
+          <blockquote class="w-full h-full">
+            <img
+              src="./assets/images/portfolio/graphic1.jpg"
+              data-src="./assets/images/portfolio/graphic1.jpg"
+              data-type="portfolio__img"
+              alt="portfolio image"
+              class="w-full h-full object-cover portfolio__img"
+            />
+          </blockquote>
+        </figure>
+        <figure
+          class="
+            w-full
+            h-auto
+            md:h-80
+            relative
+            rounded-2xl
+            overflow-hidden
+            portfolio__item
+            transform
+            transition
+            ease-in-out
+            duration-500
+            cursor-pointer
+            hover:shadow-lg
+          "
+          data-portfolio-type="digital"
+        >
+          <blockquote class="w-full h-full">
+            <img
+              src="./assets/images/portfolio/digital.jpg"
+              data-src="./assets/images/portfolio/digital.jpg"
+              data-type="portfolio__img"
+              alt="portfolio image"
+              class="w-full h-full object-cover portfolio__img"
+            />
+          </blockquote>
+        </figure>
+        <figure
+          class="
+            w-full
+            h-auto
+            md:h-80
+            relative
+            rounded-2xl
+            overflow-hidden
+            portfolio__item
+            transform
+            transition
+            ease-in-out
+            duration-500
+            cursor-pointer
+            hover:shadow-lg
+          "
+          data-portfolio-type="digital"
+        >
+          <blockquote class="w-full h-full">
+            <img
+              src="./assets/images/portfolio/digital1.jpg"
+              data-src="./assets/images/portfolio/digital1.jpg"
+              data-type="portfolio__img"
+              alt="portfolio image"
+              class="w-full h-full object-cover portfolio__img"
+            />
+          </blockquote>
         </figure>
       </main>
+      <div
+        class="
+          portfolio__viewer
+          fixed
+          top-0
+          left-0
+          bg-gray-700 bg-opacity-50
+          p-14
+          z-10
+          w-screen
+          h-screen
+          backdrop-filter backdrop-blur-lg
+          overflow-y-auto
+          hidden
+        "
+      >
+        <button
+          class="
+            portfolio__btn--close
+            w-10
+            h-10
+            rounded-full
+            bg-gray-700
+            text-xl text-white
+            fixed
+            top-0
+            right-0
+            m-3
+          "
+        >
+          <i class="fas fa-times"></i>
+        </button>
+        <div
+          class="
+            portfolio__dot--box
+            w-50
+            h-auto
+            fixed
+            top-1/2
+            transform
+            -translate-y-1/2
+            right-0
+            flex
+            items-center
+            justify-around
+            flex-col
+            p-2
+            mr-3
+          "
+        ></div>
+        <div
+          class="
+            portfolio__numbers--box
+            fixed
+            bottom-0
+            left-1/2
+            transform
+            -translate-x-1/2
+            mb-3
+            text-center text-gray-200
+            bg-gray-800
+            py-2
+            px-4
+            z-10
+          "
+        >
+          <span class="inline-block mx-1">1</span>/
+          <span class="inline-block mx-0.5">10</span>
+        </div>
+        <div class="w-full h-full flex items-center justify-center relative">
+          <button
+            class="
+              portfolio__btn--next
+              w-10
+              h-10
+              rounded-full
+              bg-yellow-600
+              text-xl text-white
+              absolute
+              top-1/2
+              right-0
+              m-3
+              transform
+              -translate-y-1/2
+            "
+          >
+            <i class="fas fa-angle-right"></i>
+          </button>
+          <button
+            class="
+              portfolio__btn--prev
+              w-10
+              h-10
+              rounded-full
+              bg-yellow-600
+              text-xl text-white
+              absolute
+              top-1/2
+              left-0
+              m-3
+              transform
+              -translate-y-1/2
+            "
+          >
+            <i class="fas fa-angle-left"></i>
+          </button>
+          <img
+            alt="portfolio image"
+            class="max-w-full h-auto portfolio__viewer--img"
+          />
+        </div>
+      </div>
     </section>
     <section class="w-full p-6" data-type="article__item" id="Relentless">
       <main
