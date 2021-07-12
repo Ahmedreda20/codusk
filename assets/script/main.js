@@ -136,6 +136,9 @@ window.onscroll = () => {
       header
         .querySelectorAll(".navBar__btn--append span")
         .forEach((span) => span.classList.replace("bg-white", "bg-gray-800"));
+    header
+      .querySelector(".codusk__header--box")
+      .classList.add("border-b", "border-gray-200");
   } else {
     header.classList.remove("bg-white"),
       header
@@ -144,6 +147,9 @@ window.onscroll = () => {
       header
         .querySelectorAll(".navBar__btn--append span")
         .forEach((span) => span.classList.replace("bg-gray-800", "bg-white"));
+    header
+      .querySelector(".codusk__header--box")
+      .classList.remove("border-b", "border-gray-200");
   }
 };
 
@@ -284,11 +290,12 @@ portfolioViewer.querySelector(".portfolio__btn--close").onclick = () => {
 
 function handleSlidersOnClick(itemsArray) {
   let portfolioCurrentItems = itemsArray;
+  let newSetItems = [...new Set(portfolioCurrentItems)];
   let numbers = document.querySelectorAll(".portfolio__numbers--box span");
-  portfolioCurrentItems.forEach((portfolio, portfolioCurrentIndex) => {
+  newSetItems.forEach((portfolio, portfolioCurrentIndex) => {
     portfolio.addEventListener("click", () => {
       numbers[0].innerHTML = portfolioCurrentIndex + 1;
-      numbers[1].innerHTML = portfolioCurrentItems.length;
+      numbers[1].innerHTML = newSetItems.length;
       portfolioViewer.classList.remove("hidden");
       document.querySelector(".portfolio__viewer--img").src =
         portfolio.querySelector("img").src;
@@ -296,7 +303,7 @@ function handleSlidersOnClick(itemsArray) {
         ".portfolio__btn--next",
         ".portfolio__btn--prev",
         portfolioCurrentIndex,
-        portfolioCurrentItems,
+        newSetItems,
         numbers
       );
     });

@@ -53,8 +53,8 @@ main :is([data-type="services"], .service__img) {
 
 .active__service--view {
   transform: scale(0.95) !important;
-  background-color: #2563eb !important;
-  border-color: #1d4ed8 !important;
+  background-color: rgb(216, 90, 6) !important;
+  border-color: rgb(216, 90, 6) !important;
 }
 .active__service--view h2 {
   color: #dbeafe !important;
@@ -250,7 +250,9 @@ main :is([data-type="services"], .service__img) {
   -ms-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
 }
-
+.btn__portfolio--active {
+  font-weight: 600 !important;
+}
 .btn__portfolio--active::after {
   position: absolute;
   content: "";
